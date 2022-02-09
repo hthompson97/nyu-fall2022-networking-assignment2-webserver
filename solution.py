@@ -9,7 +9,7 @@ def webServer(port=13331):
   #Prepare a server socket
   serverSocket.bind(("", port))
   #Fill in start
-
+  #TODO: parse?
   #Fill in end
 
   while True:
@@ -23,7 +23,7 @@ def webServer(port=13331):
         filename = message.split()[1]
         f = open(filename[1:])
         outputdata = #Fill in start     #Fill in end
-        
+
         #Send one HTTP header line into socket.
         #Fill in start
 
@@ -36,15 +36,16 @@ def webServer(port=13331):
         connectionSocket.send("\r\n".encode())
         connectionSocket.close()
       except IOError:
+
         # Send response message for file not found (404)
         #Fill in start
-
+        message = #TODO
         #Fill in end
 
 
         #Close client socket
         #Fill in start
-
+        connectionSocket.close()
         #Fill in end
 
     except (ConnectionResetError, BrokenPipeError):
