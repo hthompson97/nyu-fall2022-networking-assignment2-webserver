@@ -27,8 +27,8 @@ def webServer(port=13331):
 
         #Send one HTTP header line into socket.
         #Fill in start
-        outputdata += "Content-Type: text/plain\n"
-        outputdata += ("File Data: " + f.read() + "\n")
+        #outputdata += "Content-Type: text/plain\n"
+        #outputdata += ("File Data: " + f.read() + "\n")
         #print(outputdata)
         #Fill in end
 
