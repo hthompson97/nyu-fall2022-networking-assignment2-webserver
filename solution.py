@@ -14,9 +14,9 @@ def webServer(port=13331):
 
   while True:
     #Establish the connection
-    print('Ready to serve...')
+    #print('Ready to serve...')
     connectionSocket, addr = serverSocket.accept() #Fill in
-
+    #print(addr)
     try:
 
       try:
@@ -28,8 +28,8 @@ def webServer(port=13331):
         #Send one HTTP header line into socket.
         #Fill in start
         outputdata += "Content-Type: text/plain\n"
-        outputdata += f.read()
-        print(outputdata)
+        outputdata += ("File Data: " + f.read() + "\n")
+        #print(outputdata)
         #Fill in end
 
         #Send the content of the requested file to the client
